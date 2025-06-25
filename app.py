@@ -128,11 +128,7 @@ if 'clear_files' not in st.session_state:
 dark_mode = st.toggle("🌙 Dark Mode", value=False)
 set_bg_with_theme("Background_img_2.jpg", "Background_dark_img_2.jpg", dark_mode)
 
-@st.cache_resource
-def load_cnn_model():
-    return load_model("GLD_Binary_Classification_Final.h5")
-
-model = load_cnn_model()
+model = load_model("GLD_Binary_Classification_Final.h5")
 
 st.markdown('<div class="title">🌿 GreenGuard 🌿</div>', unsafe_allow_html=True)
 st.markdown('<div class="subheader">AI-powered Guava Leaf Disease Detector</div>', unsafe_allow_html=True)
